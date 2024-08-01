@@ -18,6 +18,7 @@ export async function getBookById(id) {
   // Query the database and return the book with a matching id or null
 
   // Define the SQL query to fetch the book with the specified id from the 'books' table
+  //dolllar sign is the placeholder for the id, as a parameter. this also prevents SQL injection.
   const queryText = "SELECT * FROM books WHERE id = $1";
 
   // Use the pool object to send the query to the database
